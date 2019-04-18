@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Front end</title>
+
+        <link href="./src/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+
+        <div class="wrapper">
+            <div class="header">
+                <img src="./src/img/header.png" />
+            </div>
+
+            <div class="carousel">
+                <div class="slide">
+                    <img src="./src/img/Layer_1.png">
+                </div>
+                
+                <div class="slide">
+                    <img src="./src/img/Layer_2.png">
+                </div>
+                
+                <div class="slide">
+                    <img src="./src/img/Layer_3.png">
+                </div>
+
+                <div class="slide">
+                    <img src="./src/img/Layer_4.png">
+                </div>
+                
+                <a class="previous-btn" onclick="slide(-1)">
+                    <img src="./src/img/Thumbs/arrow_left.png" />
+                </a>
+                <a class="next-btn" onclick="slide(1)">
+                    <img src="./src/img/Thumbs/arrow_right.png" />
+                </a>
+            </div>
+
+            <div class="text-center align-center">
+                <span class="indicator" onclick="checkSlide(1)">
+                    <img class="default" src="./src/img/Thumbs/1.png" alt="" />
+                    <img class="bordered" src="./src/img/Thumbs/1_over.png" alt="" />
+                </span>
+                <span class="indicator" onclick="checkSlide(2)">
+                    <img class="default" src="./src/img/Thumbs/2.png" alt="" />
+                    <img class="bordered" src="./src/img/Thumbs/2_over.png" alt="" />
+                </span> 
+                <span class="indicator" onclick="checkSlide(3)">
+                    <img class="default" src="./src/img/Thumbs/3.png" alt="" />
+                    <img class="bordered" src="./src/img/Thumbs/3_over.png" alt="" />
+                </span>
+                <span class="indicator" onclick="checkSlide(4)">
+                    <img class="default" src="./src/img/Thumbs/4.png" alt="" />
+                    <img class="bordered" src="./src/img/Thumbs/4_over.png" alt="" />
+                </span>
+            </div>
+        </div>
+
+        <script src="./src/js/main.js"></script>
+    </body>
+</html>

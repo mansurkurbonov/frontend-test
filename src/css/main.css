@@ -1,0 +1,106 @@
+body {
+    background-color: #0D0E0F;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.carousel {
+  position: relative;
+  margin-top: -165px;
+}
+
+.slide {
+    display: none;
+    -webkit-animation-name: blur;
+    -webkit-animation-duration: 1s;
+    animation-name: blur;
+    animation-duration: 1s;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previous-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    transition: 0.6s ease;
+    right: 0;
+    user-select: none;
+}
+
+.indicator img {
+    max-height: 70px;
+    margin-right: 15px;
+}
+
+.indicator.active .default {
+    display: none;
+}
+
+.indicator.active .bordered {
+    display: block;
+}
+
+.indicator .default {
+    display: block;
+}
+
+.indicator .bordered {
+    display: none;
+}
+
+.header {
+    position: relative;
+}
+
+.header img {
+    max-width: 500px;    
+}
+
+@-webkit-keyframes blur {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes blur {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        max-width: 100%!important;
+    }
+}

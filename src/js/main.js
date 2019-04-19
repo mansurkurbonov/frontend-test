@@ -47,9 +47,17 @@ function deviceOrientationSlider() {
 function deviceOrientationHandler(event) {
     var alpha = event.alpha
     
-    if (alpha >= 20 && alpha <= 35) {
-        slide(1)
-    } else if (alpha <= 340 && alpha >=325) {
-        slide(-1)
+    if (alpha >= 10 && alpha <= 70) {
+        (function(scope) {
+            setTimeout(function() {
+                slide(1)                
+            }, 2000);
+        }(this));
+    } else if (alert <= 350 && alpha >= 290) {
+        (function(scope) {
+            setTimeout(function() {
+                slide(-1)                
+            }, 2000);
+        }(this));
     }
 }

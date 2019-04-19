@@ -1,4 +1,6 @@
 var initialIndex = 1;
+
+deviceOrientationSlider();
 slides(initialIndex);
 
 function slide(val) {
@@ -13,14 +15,41 @@ function slides(val) {
     var i;
     var slides = document.getElementsByClassName("slide");
     var indicators = document.getElementsByClassName("indicator");
-    if (val > slides.length) {initialIndex = 1}    
-    if (val < 1) {initialIndex = slides.length}
+    
+    if (val > slides.length) { 
+        initialIndex = 1
+    }
+
+    if (val < 1) {
+        initialIndex = slides.length
+    }
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     for (i = 0; i < indicators.length; i++) {
         indicators[i].className = indicators[i].className.replace(" active", "");
     }
+
     slides[initialIndex-1].style.display = "block";  
     indicators[initialIndex-1].className += " active";
+}
+
+function deviceOrientationSlider() {
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+    } else {
+        console.log("DeviceOriention not supported")
+    }
+}
+
+function deviceOrientationHandler(event) {
+    var alpha = event.alpha
+    
+    if (alpha >= 10 && alpha <= 70) {
+        slide(1)
+    } else if (alert <= 350 && alpha >= 290) {
+        slide(-1)
+    }
 }

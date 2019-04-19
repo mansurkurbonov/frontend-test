@@ -38,26 +38,26 @@ function slides(val) {
 
 function deviceOrientationSlider() {
     if (window.DeviceOrientationEvent) {
-        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+        window.addEventListener('deviceorientation', deviceOrientationHandler, true);
     } else {
         console.log("DeviceOriention not supported")
     }
 }
 
 function deviceOrientationHandler(event) {
-    var alpha = event.alpha
+    alert(event.alpha)
+    alert(event.gamma)
     
+    var alpha = event.alpha
     if (alpha >= 10 && alpha <= 70) {
-        (function(scope) {
-            setTimeout(function() {
-                slide(1)                
-            }, 2000);
-        }(this));
+        slide(1)
     } else if (alert <= 350 && alpha >= 290) {
-        (function(scope) {
-            setTimeout(function() {
-                slide(-1)                
-            }, 2000);
-        }(this));
+        slide(-1)
     }
 }
+
+// (function(scope) {
+//     setTimeout(function() {
+//         slide(-1)                
+//     }, 2000);
+// }(this));

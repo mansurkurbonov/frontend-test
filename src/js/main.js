@@ -47,9 +47,9 @@ function deviceOrientationSlider() {
 function deviceOrientationHandler(event) {
     var alpha = event.alpha
     
-    if (alpha >= 10 && alpha <= 70) {
+    if (alpha === 20) {
         slide(1)
-    } else if (alert <= 350 && alpha >= 290) {
+    } else if (alpha === 340) {
         slide(-1)
     }
 }
